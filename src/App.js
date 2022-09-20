@@ -6,6 +6,7 @@ import Container from "./components/Container";
 
 const theme = {
   blue: "hsl(223, 87%, 63%)",
+  notQuitePaleBlue: "hsl(223, 100%, 75%)",
   paleBlue: "hsl(223, 100%, 88%)",
   lightRed: "hsl(354, 100%, 66%)",
   grey: "hsl(0, 0%, 59%)",
