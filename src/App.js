@@ -10,6 +10,7 @@ const theme = {
   paleBlue: "hsl(223, 100%, 88%)",
   lightRed: "hsl(354, 100%, 66%)",
   grey: "hsl(0, 0%, 59%)",
+  paleGrey: "hsl(0, 0%, 90%)",
   veryDarkBlue: "hsl(209, 33%, 12%)",
   white: "hsl(0, 0%, 100%)",
 };
