@@ -22,7 +22,7 @@ const Footer = () => {
           />
         </Button>
         <Button>
-          <FontAwesomeIcon icon={faInstagram} size="lg" transform="right-1" />
+          <FontAwesomeIcon icon={faInstagram} size="lg" />
         </Button>
       </IconContainer>
       <Copyright>&copy; Copyright Ping. All rights reserved.</Copyright>

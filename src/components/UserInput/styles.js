@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const InputStyles = styled.div`
+export const InputStyles = styled.form`
   display: flex;
   flex-direction: column;
   margin: 1rem;
@@ -10,28 +10,46 @@ export const InputStyles = styled.div`
   }
 `;
 
-export const EmailInput = styled.input`
-  border: 1px solid ${(props) => props.theme.paleBlue};
-  border-radius: 1.5rem;
-  height: 2.3rem;
-  font-size: 0.8rem;
-  padding-left: 2rem;
+export const InputContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   margin-bottom: 0.7rem;
-  color: ${(props) => props.theme.paleBlue};
 
   @media screen and (min-width: 600px) {
-    width: 66%;
+    width: 70%;
     margin-right: 0.7rem;
   }
 `;
 
+export const EmailInput = styled.input`
+  border: 1px solid ${(props) => props.theme.paleBlue};
+  border-radius: 2rem;
+  height: 3.3rem;
+  font-size: 0.8rem;
+  padding-left: 2rem;
+  color: ${(props) => props.theme.paleBlue};
+`;
+
+export const ErrorMessage = styled.h6`
+  font-size: 0.75rem;
+  font-style: italic;
+  font-family: "Libre Franklin", sans-serif;
+  color: ${(props) => props.theme.lightRed};
+  text-align: center;
+  margin: 0.5rem 0 1rem 0;
+  @media screen and (min-width: 600px) {
+    text-align: left;
+    margin: 0.5rem 0 0 2rem;
+  }
+`;
+
 export const Button = styled.button`
-  border-radius: 1.5rem;
-  height: 2.5rem;
+  border-radius: 2rem;
+  height: 3.5rem;
   background-color: ${(props) => props.theme.blue};
   color: ${(props) => props.theme.white};
   border-style: none;
-  font-size: 0.75rem;
+  font-size: 1rem;
   font-weight: 600;
   font-family: "Libre Franklin", sans-serif;
   box-shadow: 2px 2px 8px 3px ${(props) => props.theme.paleBlue};
@@ -39,9 +57,10 @@ export const Button = styled.button`
 
   &:hover {
     background-color: ${(props) => props.theme.notQuitePaleBlue};
+    cursor: pointer;
   }
 
   @media screen and (min-width: 600px) {
-    width: 33%;
+    width: 30%;
   }
 `;

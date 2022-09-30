@@ -21,6 +21,7 @@ export const Button = styled.button`
   &:hover {
     background-color: ${(props) => props.theme.blue};
     color: ${(props) => props.theme.white};
+    cursor: pointer;
   }
 `;
 
