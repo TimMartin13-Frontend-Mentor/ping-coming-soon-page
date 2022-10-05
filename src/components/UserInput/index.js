@@ -9,6 +9,7 @@ import {
 
 const UserInput = () => {
   const [email, setEmail] = useState("");
+  const [placeholder, setPlaceholder] = useState("Your email address...");
   const [error, setError] = useState(false);
 
   const emailValidation = (e) => {
@@ -17,6 +18,7 @@ const UserInput = () => {
 
     if (!regEx.test(email)) {
       setError(true);
+      setPlaceholder("example@email.com");
     } else {
       setError(false);
     }
@@ -32,9 +34,11 @@ const UserInput = () => {
         <EmailInput
           name="EmailInput"
           type="text"
-          placeholder="Your email address..."
+          placeholder={placeholder}
+          aria-label="email"
           value={email}
           onChange={handleInputChange}
+          error={error}
         />
         {error ? (
           <ErrorMessage>Please provide a valid email address</ErrorMessage>

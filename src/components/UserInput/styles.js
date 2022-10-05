@@ -22,12 +22,21 @@ export const InputContainer = styled.div`
 `;
 
 export const EmailInput = styled.input`
-  border: 1px solid ${(props) => props.theme.paleBlue};
+  border: 1px solid
+    ${(props) => (props.error ? props.theme.lightRed : props.theme.paleBlue)};
   border-radius: 2rem;
   height: 3.3rem;
   font-size: 0.8rem;
   padding-left: 2rem;
-  color: ${(props) => props.theme.paleBlue};
+
+  &:focus::placeholder {
+    color: ${(props) => props.theme.veryDarkBlue};
+  }
+
+  &::placeholder {
+    color: ${(props) =>
+      props.error ? props.theme.veryDarkBlue : props.theme.paleBlue};
+  }
 `;
 
 export const ErrorMessage = styled.h6`
