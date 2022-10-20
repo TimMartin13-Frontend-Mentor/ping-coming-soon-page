@@ -11,13 +11,19 @@ const UserInput = () => {
   const [email, setEmail] = useState('');
   const [placeholder, setPlaceholder] = useState('Your email address...');
   const [error, setError] = useState(false);
+  const [errorMessage, setErrorMesage] = useState('');
 
   const emailValidation = (e) => {
     e.preventDefault();
     const regEx = /[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,8}(.[a-z{2,8}])?/g;
 
-    if (!regEx.test(email)) {
+    if (!email) {
       setError(true);
+      setErrorMesage('Whoops! It looks like you forgot to add your email');
+      setPlaceholder('example@email/com');
+    } else if (!regEx.test(email)) {
+      setError(true);
+      setErrorMesage('Please provide a valid email address');
       setPlaceholder('example@email/com');
     } else {
       setError(false);
@@ -40,11 +46,7 @@ const UserInput = () => {
           onChange={handleInputChange}
           error={error}
         />
-        {error ? (
-          <ErrorMessage>Please provide a valid email address</ErrorMessage>
-        ) : (
-          ''
-        )}
+        {error ? <ErrorMessage>{errorMessage}</ErrorMessage> : ''}
       </InputContainer>
       <Button type='submit' onClick={emailValidation}>
         Notify Me
