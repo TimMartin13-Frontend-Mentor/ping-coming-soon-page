@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Button,
   EmailInput,
   ErrorMessage,
   InputContainer,
   InputStyles,
-} from "./styles";
+} from './styles';
 
 const UserInput = () => {
-  const [email, setEmail] = useState("");
-  const [placeholder, setPlaceholder] = useState("Your email address...");
+  const [email, setEmail] = useState('');
+  const [placeholder, setPlaceholder] = useState('Your email address...');
   const [error, setError] = useState(false);
 
   const emailValidation = (e) => {
@@ -18,7 +18,7 @@ const UserInput = () => {
 
     if (!regEx.test(email)) {
       setError(true);
-      setPlaceholder("example@email.com");
+      setPlaceholder('example@email/com');
     } else {
       setError(false);
     }
@@ -32,10 +32,10 @@ const UserInput = () => {
     <InputStyles>
       <InputContainer>
         <EmailInput
-          name="EmailInput"
-          type="text"
+          name='EmailInput'
+          type='text'
           placeholder={placeholder}
-          aria-label="email"
+          aria-label='email'
           value={email}
           onChange={handleInputChange}
           error={error}
@@ -43,10 +43,10 @@ const UserInput = () => {
         {error ? (
           <ErrorMessage>Please provide a valid email address</ErrorMessage>
         ) : (
-          ""
+          ''
         )}
       </InputContainer>
-      <Button type="submit" onClick={emailValidation}>
+      <Button type='submit' onClick={emailValidation}>
         Notify Me
       </Button>
     </InputStyles>

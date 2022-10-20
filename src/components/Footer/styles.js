@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const IconContainer = styled.div`
   display: flex;
@@ -27,4 +27,9 @@ export const Button = styled.button`
 
 export const Copyright = styled.div`
   font-size: 0.6rem;
+  color: ${(props) => props.theme.grey};
+
+  @media screen and (min-width: 600px) {
+    font-size: 0.75rem;
+  }
 `;

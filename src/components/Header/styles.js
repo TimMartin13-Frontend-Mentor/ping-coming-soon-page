@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Logo = styled.img`
-  width: 3.5rem;
+  width: 3.4rem;
   margin-bottom: 1.5rem;
 
   @media screen and (min-width: 540px) {
-    width: 4.5rem;
+    width: 5rem;
     margin-bottom: 0.5rem;
   }
 `;
